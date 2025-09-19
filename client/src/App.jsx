@@ -6,15 +6,14 @@ import SimulateButton from "./components/buttons/SimulateButton";
 import SimulationTable from "./components/tables/SimulationTable";
 
 const App = () => {
+  const { data, loading, error } = useFetch("employees");
+
   const [simulatedData, setSimulatedData] = useState([]);
   const [simulatedError, setSimulatedError] = useState(null);
   const [simulatedLoading, setSimulatedLoading] = useState(false);
 
-  const { data, loading, error } = useFetch("employees");
-
   const handleSimulateAccess = async () => {
     setSimulatedLoading(true);
-    setSimulatedError(null);
 
     try {
       const response = await axios.get(
