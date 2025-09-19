@@ -32,7 +32,7 @@ const SimulationTable = ({ employees }) => {
               <td className="py-3 px-4 border-b border-secondary">
                 {employee.status}
               </td>
-              <td className="text-center py-3 px-4 border-b border-secondary">
+              <td className="py-3 px-4 border-b border-secondary">
                 {employee.reason}
               </td>
             </tr>
